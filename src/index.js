@@ -124,7 +124,7 @@ client.on("interactionCreate", async (interaction) => {
             await interaction.reply("No hay canciones disponibles")
           else
             await interaction.reply(`${clicker_author} - ha avanzado a la siguiente canción`)
-          Manager.skipVideo(guild_id, channel);
+          await Manager.skipVideo(guild_id, channel, interaction);
           break
 
       }
